@@ -130,5 +130,53 @@ export const fetchBorrowers = async ({ page, limit, search, sortBy, sortOrder })
 }
 ```
 
+## Deployment
+
+### Deploy to Vercel
+
+1. **Install Vercel CLI** (optional, but helpful):
+```bash
+npm i -g vercel
+```
+
+2. **Deploy via Vercel Dashboard:**
+   - Go to [vercel.com](https://vercel.com) and sign in with GitHub
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect it's a Vite project
+   - Build command: `npm run build`
+   - Output directory: `dist`
+   - Click "Deploy"
+
+3. **Or deploy via CLI:**
+```bash
+vercel
+```
+
+That's it! Your app will be live in seconds.
+
+### Deploy to Netlify
+
+1. **Install Netlify CLI** (optional):
+```bash
+npm i -g netlify-cli
+```
+
+2. **Deploy via Netlify Dashboard:**
+   - Go to [netlify.com](https://netlify.com) and sign in with GitHub
+   - Click "Add new site" → "Import an existing project"
+   - Select your GitHub repository
+   - Build settings:
+     - Build command: `npm run build`
+     - Publish directory: `dist`
+   - Click "Deploy site"
+
+3. **Or deploy via CLI:**
+```bash
+netlify deploy --prod
+```
+
+Both platforms will automatically deploy on every push to your main branch if you connect your GitHub repo!
+
 
 
